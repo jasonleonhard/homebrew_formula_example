@@ -42,37 +42,38 @@
 
 #### For the purposes of this tutorial we will create a folder and enter it
 
-  mkdir ~/homebrew_scripts
-  cd ~/homebrew_scripts
+    mkdir ~/homebrew_scripts
+    cd ~/homebrew_scripts
 
 #### Clone that repo wherever you want it locally stored on your machine
+
     git clone https://github.com/un5t0ppab13/homebrew_formula_example.git
-  cd homebrew_formula_example
+    cd homebrew_formula_example
 
 #### Create a script, this is a simple one that just echos upon running
 
-  echo '#!/bin/sh
-  echo "Some example text shown when user runs the command: example_cmd"' > example_cmd
+    echo '#!/bin/sh
+    echo "Some example text shown when user runs the command: example_cmd"' > example_cmd
 
 #### Change its permissions and run it
 
-  chmod u+x example_cmd
-  ./example_cmd
+    chmod u+x example_cmd
+    ./example_cmd
 
 #### Tag that repo with a version
 
-  git tag 1.0.0
-  git push --tags
+    git tag 1.0.0
+    git push --tags
 
 #### Go ahead and add, commit, push
 
-  git add .
-  git commit -am "second"
-  git push          # git push origin master
+    git add .
+    git commit -am "second"
+    git push          # git push origin master
 
 #### Open the following link (again change username and repo first)
 
-  https://github.com/un5t0ppab13/homebrew_formula_example/releases
+    open https://github.com/un5t0ppab13/homebrew_formula_example/releases
   
 This is the format https://github.com/username/reponame/releases
 
@@ -80,11 +81,11 @@ This is the format https://github.com/username/reponame/releases
 
 Now this is in the clipboard run the command
  
-  brew create https://github.com/un5t0ppab13/homebrew_formula_example/archive/1.0.0.tar.gz
+    brew create https://github.com/un5t0ppab13/homebrew_formula_example/archive/1.0.0.tar.gz
 
 #### This creates this file which you need to edit
 
-  /usr/local/Library/Formula/homebrew_formula_example.rb
+    /usr/local/Library/Formula/homebrew_formula_example.rb
 
 # 1. Delete all comments
 # 2. And everything between def install ...... end
@@ -96,7 +97,7 @@ Again remember to use your command name not mine
 
 #### Now you reinstall 
 
-  brew reinstall homebrew_formula_example
+    brew reinstall homebrew_formula_example
 
 It downloads to: /Library/Caches/Homebrew/homebrew_formula_example-1.0.0.tar.gz
 
@@ -104,13 +105,13 @@ It downloads to: /Library/Caches/Homebrew/homebrew_formula_example-1.0.0.tar.gz
 
 #### Verify this worked with the following
 
-  which example_cmd
+    which example_cmd
 
 It should say something like /usr/local/bin/example_cmd
 
 You should now be able to run
 
-  example_cmd
+    example_cmd
  
 At this point you do not need a local copy of the repo if you do not want it
  
