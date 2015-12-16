@@ -1,3 +1,5 @@
+# Tutorial: Create your own Homebrew Formula (aka script)
+
 ## Homebrew Terminology
 
 | Term           | Description                                                | Example                                              |
@@ -9,11 +11,7 @@
 | **Tap**        | An optional Git repository of **Formulae** and/or commands | `/usr/local/Library/Taps/homebrew/homebrew-versions` |
 | **Bottle**     | Pre-built **Keg** used instead of building from source     | `qt-4.8.4.mavericks.bottle.tar.gz`                   |
 
-
-# Tutorial: Create your own Homebrew script
-
-
-### FYI: You will want to change each of these words to suit your needs as they appear below
+#### FYI: You will want to change each of these words to suit your needs as they appear below
 
 #### The repo is called 
   
@@ -87,9 +85,9 @@ Now this is in the clipboard run the command
 
     /usr/local/Library/Formula/homebrew_formula_example.rb
 
-# 1. Delete all comments
-# 2. And everything between def install ...... end
-# 3. Paste this inside of that def
+## 1. Delete all comments
+## 2. And everything between def install ...... end
+## 3. Paste this inside of that def
 
     bin.install "example_cmd"
 
@@ -109,12 +107,17 @@ It downloads to: /Library/Caches/Homebrew/homebrew_formula_example-1.0.0.tar.gz
 
 It should say something like /usr/local/bin/example_cmd
 
-You should now be able to run
+#### You should now be able to run
 
     example_cmd
  
-At this point you do not need a local copy of the repo if you do not want it
- 
- 
-Thank you for reading this tutorial, all I request is that you do not replicate this material and claim it to be your own.
-ie no need to copy this tutorial, just link it, share it, fork it, etc...
+#### At this point you do not need a local copy of the repo if you do not want it
+  
+#### Now anyone can use homebrew to download your script (an alternative to git)
+
+  brew tap un5t0ppab13/homebrew_formula_example
+  brew install example_cmd
+
+Thank you for reading this tutorial, I hope it was enjoyable and you find it useful.
+All I request in return is that you do not replicate this material and claim it to be your own, but you DO SHARE IT.
+i.e. no need to copy this tutorial, just link it, share it, fork it, star it, etc... (MIT licence)
