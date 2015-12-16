@@ -93,7 +93,7 @@ Now this is in the clipboard run the command
 
 Again remember to use your command name not mine
 
-#### Now you reinstall 
+#### Now you reinstall
 
     brew reinstall homebrew_formula_example
 
@@ -115,9 +115,11 @@ It should say something like /usr/local/bin/example_cmd
   
 #### Now anyone can use homebrew to download your script (an alternative to git)
 
-  brew tap un5t0ppab13/homebrew_formula_example
-  brew install example_cmd
+    brew tap un5t0ppab13/homebrew_formula_example
+    brew install example_cmd
 
 Thank you for reading this tutorial, I hope it was enjoyable and you find it useful.
+
 All I request in return is that you do not replicate this material and claim it to be your own, but you DO SHARE IT.
+
 i.e. no need to copy this tutorial, just link it, share it, fork it, star it, etc... (MIT licence)
