@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "Some example text shown when user runs the command: example_cmd"
